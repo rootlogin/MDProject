@@ -5,10 +5,9 @@
 package com.material.sdk.api;
 
 import android.content.Context;
-import android.content.Intent;
 
 import com.material.sdk.cache.CacheApi;
-import com.material.sdk.http.HttpApi;
+import com.material.sdk.network.HttpApi;
 
 /**
  * Created by liuyonglong on 16/3/30.

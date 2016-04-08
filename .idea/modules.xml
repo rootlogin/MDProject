@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MDProject.iml" filepath="$PROJECT_DIR$/MDProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MDRegistered/MDRegistered.iml" filepath="$PROJECT_DIR$/MDRegistered/MDRegistered.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MDSDK/MDSDK.iml" filepath="$PROJECT_DIR$/MDSDK/MDSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MDSample/MDSample.iml" filepath="$PROJECT_DIR$/MDSample/MDSample.iml" />
+    </modules>
+  </component>
+</project>
