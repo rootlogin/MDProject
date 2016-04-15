@@ -1,16 +1,9 @@
-package com.gohon.material.POJO;
+package com.gohon.material.pojo;
 
-import android.annotation.TargetApi;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.ObservableField;
-import android.os.Build;
-import android.text.Editable;
-import android.text.TextWatcher;
 
 import com.gohon.material.BR;
-
-import java.util.Objects;
 
 /**
  * Created by liuyonglong on 16/3/22.

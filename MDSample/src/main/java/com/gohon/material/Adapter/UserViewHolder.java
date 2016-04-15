@@ -2,7 +2,7 @@
  * Copyright (c) 2016.3.$today.day-$today.hour24:20:16
  */
 
-package com.gohon.material.Adapter;
+package com.gohon.material.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

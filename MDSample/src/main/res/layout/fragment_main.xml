@@ -5,15 +5,15 @@
 
         <variable
             name="handler"
-            type="com.gohon.material.Handlers.UserHandlers" />
+            type="com.gohon.material.handlers.UserHandlers" />
 
         <variable
             name="user"
-            type="com.gohon.material.POJO.User" />
+            type="com.gohon.material.pojo.User" />
 
         <variable
             name="event"
-            type="com.gohon.material.Events.UserEvents" />
+            type="com.gohon.material.events.UserEvents" />
     </data>
 
     <LinearLayout
@@ -49,7 +49,6 @@
                 android:text="stop"
                 tools:targetApi="m" />
         </LinearLayout>
-
 
         <TextView
             android:layout_width="wrap_content"

@@ -7,7 +7,7 @@
     <data>
         <variable
             name="user"
-            type="com.gohon.material.POJO.User"/>
+            type="com.gohon.material.pojo.User"/>
 
         <!--<import type="java.util.List"/>-->
 

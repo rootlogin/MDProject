@@ -1,6 +1,7 @@
 package com.gohon.material;
 
 import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -10,10 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.gohon.material.Adapter.UserAdapter;
-import com.gohon.material.Events.UserEvents;
-import com.gohon.material.Handlers.UserHandlers;
-import com.gohon.material.POJO.User;
+import com.gohon.material.adapter.UserAdapter;
+import com.gohon.material.events.UserEvents;
+import com.gohon.material.handlers.UserHandlers;
+import com.gohon.material.pojo.User;
 import com.gohon.material.databinding.FragmentMainBinding;
 import com.gohon.material.http.UserApi;
 import java.util.ArrayList;
@@ -58,7 +59,7 @@ public class MainActivityFragment extends Fragment {
         UserHandlers handlers = new UserHandlers();
         fragmentMainBinding.setEvent(events);
         fragmentMainBinding.setHandler(handlers);
-        testVolley();
+        retrofit2Request();
 
         return rootView;
     }
@@ -71,7 +72,7 @@ public class MainActivityFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
-    private void testVolley(){
+    private void retrofit2Request(){
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.37.63.86:8080/MDProjectServer/")
@@ -83,12 +84,12 @@ public class MainActivityFragment extends Fragment {
         call.enqueue(new Callback<com.gohon.material.http.User>() {
             @Override
             public void onResponse(Call<com.gohon.material.http.User> call, Response<com.gohon.material.http.User> response) {
-                Log.e("test",response.body().getName());
+                Log.e("retrofit2",response.body().getName());
             }
 
             @Override
             public void onFailure(Call<com.gohon.material.http.User> call, Throwable t) {
-                Log.e("test",t.toString());
+                Log.e("retrofit2",t.toString());
             }
         });
 
@@ -96,4 +97,8 @@ public class MainActivityFragment extends Fragment {
 
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
 }

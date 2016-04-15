@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/MDRegistered" />
             <option value="$PROJECT_DIR$/MDSDK" />
             <option value="$PROJECT_DIR$/MDSample" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="myModules">
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$/MDRegistered" />
             <option value="$PROJECT_DIR$/MDSDK" />
             <option value="$PROJECT_DIR$/MDSample" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>
