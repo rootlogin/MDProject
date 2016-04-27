@@ -3,7 +3,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="C:\Gohon\DeveloperTools\android\android-studio\gradle\gradle-2.10" />
         <option name="modules">
@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/MDRegistered" />
             <option value="$PROJECT_DIR$/MDSDK" />
             <option value="$PROJECT_DIR$/MDSample" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="myModules">
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$/MDRegistered" />
             <option value="$PROJECT_DIR$/MDSDK" />
             <option value="$PROJECT_DIR$/MDSample" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.gohon.material.plugsample.User;
+import com.qding.guanjia.business.login.bean.GJUserInfoBean;
+
+import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +48,7 @@ public class MainActivity extends AppCompatActivity
 
                 Intent i = new Intent(MainActivity.this, TestView.class);
 
-                View sharedView =  findViewById(R.id.image);
+                View sharedView = findViewById(R.id.image);
 //                String transitionName = getString(R.string.blue_name);
 
                 ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, sharedView, "hero");
@@ -58,6 +65,21 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        TextView textView = (TextView) findViewById(R.id.text);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("plugin_bundle");
+        if (bundle != null) {
+            GJUserInfoBean user = (GJUserInfoBean) bundle.getSerializable("plugin_gjuser");
+            StringBuffer stringBuffer = new StringBuffer();
+            stringBuffer.append(user.getMemberEntity().getName());
+            stringBuffer.append("-----");
+            stringBuffer.append(user.getMemberEntity().getMobile());
+            textView.setText(stringBuffer.toString());
+        }
+
     }
 
     @Override

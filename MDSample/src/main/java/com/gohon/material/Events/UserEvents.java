@@ -2,9 +2,8 @@
  * Copyright (c) 2016.3.$today.day-$today.hour24:53:10
  */
 
-package com.gohon.material.Events;
+package com.gohon.material.events;
 
-import android.content.Context;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,9 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.gohon.material.Adapter.UserAdapter;
 import com.gohon.material.MainActivityFragment;
-import com.gohon.material.POJO.User;
+import com.gohon.material.pojo.User;
 
 /**
  * Created by liuyonglong on 16/3/23.

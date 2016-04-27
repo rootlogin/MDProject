@@ -2,14 +2,14 @@
  * Copyright (c) 2016.3.$today.day-$today.hour24:18:27
  */
 
-package com.gohon.material.Adapter;
+package com.gohon.material.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.gohon.material.BR;
-import com.gohon.material.POJO.User;
+import com.gohon.material.pojo.User;
 import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterMainBinding;
 import java.util.List;

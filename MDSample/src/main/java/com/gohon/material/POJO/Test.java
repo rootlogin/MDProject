@@ -2,7 +2,7 @@
  * Copyright (c) 2016.3.$today.day-$today.hour24:6:20
  */
 
-package com.gohon.material.POJO;
+package com.gohon.material.pojo;
 
 import java.util.List;
 
