@@ -31,7 +31,9 @@ public class HomeFragment extends Fragment{
         homeModle.setImageUrl("");
         homeModle.setTitle("测试测试");
         homeModle.setTitle("Content");
-        homeModles.add(homeModle);
+        for (int i = 0;i<10;i++){
+            homeModles.add(homeModle);
+        }
     }
 
     @Nullable

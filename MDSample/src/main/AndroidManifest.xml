@@ -8,18 +8,30 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:name=".SampleApplication"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemeCustom">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            >
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <action android:name="me.chunyu.clwang.plugin.action_main"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SearchableActivity"
+            android:launchMode="singleTop"><!--很关键-->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
         </activity>
 
         <activity
@@ -27,7 +39,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.TAB" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

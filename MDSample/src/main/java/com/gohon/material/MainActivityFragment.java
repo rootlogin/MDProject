@@ -84,12 +84,12 @@ public class MainActivityFragment extends Fragment {
         call.enqueue(new Callback<com.gohon.material.http.User>() {
             @Override
             public void onResponse(Call<com.gohon.material.http.User> call, Response<com.gohon.material.http.User> response) {
-                Log.e("retrofit2",response.body().getName());
+//                Log.e("retrofit2",response.body().getName());
             }
 
             @Override
             public void onFailure(Call<com.gohon.material.http.User> call, Throwable t) {
-                Log.e("retrofit2",t.toString());
+//                Log.e("retrofit2",t.toString());
             }
         });
 

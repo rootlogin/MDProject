@@ -6,4 +6,30 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="AppThemeCustom" parent="AppTheme.Base">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:searchViewStyle">@style/SearchViewTheme</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#00f</item>
+        <item name="android:actionBarPopupTheme">@style/PopupTheme</item>
+        <item name="android:textColorSecondary">#ff0</item>
+    </style>
+
+    <style name="SearchViewTheme" parent="Widget.AppCompat.Light.SearchView">
+        <item name="suggestionRowLayout">@layout/search_suggestion_row</item>
+        <item name="android:maxWidth">1200dp</item>
+        <item name="android:voiceIcon">@null</item>
+        <item name="android:voiceSearchMode"></item>
+        <item name="android:searchIcon">@null</item>
+        <item name="android:queryBackground">@android:color/white</item>
+        <item name="android:max">1200</item>
+    </style>
 </resources>
