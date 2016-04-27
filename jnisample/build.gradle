@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2016.3.$today.day-$today.hour24:4:25
- */
-
 apply plugin: 'com.android.application'
 
 android {
@@ -9,11 +5,17 @@ android {
     buildToolsVersion '24.0.0 rc3'
 
     defaultConfig {
-        applicationId "com.registered.gohon"
-        minSdkVersion 9
+        applicationId "com.gohon.material.jnisample"
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        ndk {
+            moduleName = "jniLibrary"
+            abiFilters "armeabi", "armeabi-v7a", "x86","x86_64","arm64-v8a"
+
+        }
     }
     buildTypes {
         release {
@@ -21,11 +23,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
 }
