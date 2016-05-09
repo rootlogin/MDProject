@@ -1,6 +1,8 @@
 package com.qding.guanjia.business.login.bean;
 
 
+import com.qianding.sdk.framework.bean.BaseBean;
+
 import java.util.List;
 
 /**
@@ -8,10 +10,7 @@ import java.util.List;
  */
 public class GJUserInfoBean extends BaseBean {
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
+
     /**
      * accountId : 8aa57dca534f2bde0153541cc9ab002d
      * nickName :

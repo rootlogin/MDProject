@@ -7,7 +7,7 @@ import com.gohon.material.BR;
 /**
  * Created by liuyonglong on 16/4/12.
  */
-public class HomeModle extends BaseObservable{
+public class HomeModel extends BaseObservable{
     private String imageUrl;
     private String title;
     private String content;

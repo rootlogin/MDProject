@@ -1,6 +1,8 @@
 package com.qding.guanjia.business.login.bean;
 
 
+import com.qianding.sdk.framework.bean.BaseBean;
+
 import java.util.List;
 
 /**

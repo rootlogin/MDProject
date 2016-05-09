@@ -4,7 +4,6 @@ import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.database.MatrixCursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.support.design.widget.FloatingActionButton;
@@ -17,12 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import com.gohon.material.home.activity.HomeActivity;
 import com.gohon.material.pojo.User;
-import com.gohon.material.activity.TabActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 new ComponentName(this, SearchableActivity.class)));
         mSearchView.setSuggestionsAdapter(suggestionsAdapter);
         mSearchView.setMaxWidth(1000);
+
 
         View searchPlate = mSearchView.findViewById(android.support.v7.appcompat.R.id.search_plate);
         EditText searchSourceText = (EditText)mSearchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
