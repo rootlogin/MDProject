@@ -11,13 +11,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
 import com.gohon.material.R;
-import com.gohon.material.fragment.TabFragment1;
-import com.gohon.material.fragment.TabFragment2;
-import com.gohon.material.fragment.TabFragment3;
 import com.gohon.material.home.adapter.ViewPagerAdapter;
+import com.gohon.material.home.fragment.AboutFragment;
 import com.gohon.material.home.fragment.HomeFragment;
+import com.gohon.material.home.fragment.MessageFragment;
 
 /**
  * Created by liuyonglong on 16/4/12.
@@ -43,8 +41,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private void configrationViewPage(ViewPager viewPager){
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new HomeFragment(), "Home");
-        viewPagerAdapter.addFragment(new TabFragment2(), "Message");
-        viewPagerAdapter.addFragment(new TabFragment3(), "About");
+        viewPagerAdapter.addFragment(new MessageFragment(), "Message");
+        viewPagerAdapter.addFragment(new AboutFragment(), "About");
         viewPager.setAdapter(viewPagerAdapter);
     }
 

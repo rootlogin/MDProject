@@ -1,6 +1,8 @@
 package com.qding.guanjia.business.login.bean;
 
 
+import com.qianding.sdk.framework.bean.BaseBean;
+
 /**
  * 社区所属信息
  * Created by liuyonglong on 16/3/8.

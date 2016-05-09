@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/md_8dp"
+    android:paddingLeft="@dimen/md_8dp"
+    android:paddingRight="@dimen/md_8dp"
+    android:paddingTop="@dimen/md_8dp"
+    tools:context="com.gohon.material.home.fragment.MessageFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/framgent_message_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+</layout>

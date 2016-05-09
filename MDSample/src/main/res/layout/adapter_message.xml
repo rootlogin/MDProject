@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="messageData"
+            type="com.gohon.material.home.viewmodles.MessageModel" />
+
+        <!--<import type="java.util.List"/>-->
+
+        <!--<variable name="userList" type="List&lt;User>"/>-->
+    </data>
+
+    <android.support.v7.widget.CardView
+        style="@style/CardViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            app:divider="@drawable/drawable_line"
+            app:dividerPadding="0.5dp"
+            app:showDividers="middle"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/adapter_message_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:imageUrl="@{messageData.imageUrl}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/adapter_message_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:text="@{messageData.title}"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/adapter_message_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:text="@{messageData.description}"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.CardView>
+</layout>

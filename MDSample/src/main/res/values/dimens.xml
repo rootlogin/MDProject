@@ -4,5 +4,15 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+
+
+    <dimen name="md_1dp">1dp</dimen>
+    <dimen name="md_2dp">2dp</dimen>
+    <dimen name="md_3dp">3dp</dimen>
+    <dimen name="md_4dp">4dp</dimen>
+    <dimen name="md_5dp">5dp</dimen>
+    <dimen name="md_6dp">6dp</dimen>
+    <dimen name="md_7dp">7dp</dimen>
     <dimen name="md_8dp">8dp</dimen>
+    <dimen name="md_9dp">9dp</dimen>
 </resources>

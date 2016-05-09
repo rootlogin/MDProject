@@ -8,7 +8,7 @@ import com.gohon.material.BR;
 import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterHomeBinding;
 import com.gohon.material.home.viewholder.HomeViewHolder;
-import com.gohon.material.home.viewmodles.HomeModle;
+import com.gohon.material.home.viewmodles.HomeModel;
 
 import java.util.List;
 
@@ -16,9 +16,9 @@ import java.util.List;
  * Created by liuyonglong on 16/4/13.
  */
 public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder> {
-    private List<HomeModle> homeModles;
+    private List<HomeModel> homeModles;
 
-    public HomeAdapter(List<HomeModle> homeModles) {
+    public HomeAdapter(List<HomeModel> homeModles) {
         this.homeModles = homeModles;
     }
 
@@ -33,7 +33,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder> {
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-        HomeModle homeModle = homeModles.get(position);
+        HomeModel homeModle = homeModles.get(position);
         holder.getAdapterHomeBinding().setVariable(BR.homeData, homeModle);
         holder.getAdapterHomeBinding().executePendingBindings();
     }
