@@ -1,5 +1,6 @@
 package com.gohon.material.home.weight;
 
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -14,19 +15,24 @@ public class RecyclerScrollListener extends RecyclerView.OnScrollListener{
     private int visibleThreshold = 5;
     private int lastVisibleItem, totalItemCount;
 
+
     public RecyclerScrollListener(LinearLayoutManager linearLayoutManager,RecyclerLoadMoreListener recyclerLoadMoreListener){
         this.linearLayoutManager = linearLayoutManager;
         this.recyclerLoadMoreListener = recyclerLoadMoreListener;
     }
 
 
+
+
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
+
         totalItemCount = linearLayoutManager.getItemCount();
         lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
 
         if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)) {
+
             if (recyclerLoadMoreListener != null) {
                 recyclerLoadMoreListener.OnLoadMoreListener();
             }
