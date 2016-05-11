@@ -2,13 +2,8 @@ package com.gohon.material.home.viewmodles;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.BindingAdapter;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.gohon.material.BR;
-import com.gohon.material.R;
 
 /**
  * Message Observable Model
@@ -18,7 +13,7 @@ public class MessageModel extends BaseObservable {
 
     private String title;
     private String description;
-    private String imageUrl;
+    private String image;
 
     @Bindable
     public String getTitle() {
@@ -41,24 +36,17 @@ public class MessageModel extends BaseObservable {
     }
 
     @Bindable
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImage() {
+        return image;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        notifyPropertyChanged(BR.imageUrl);
+    public void setImage(String image) {
+        this.image = image;
+        notifyPropertyChanged(BR.image);
     }
 
 
-    @BindingAdapter("bind:imageUrl")
-    public static void loadImage(ImageView imageView, String imageUrl) {
-//        Picasso.with(imageView.getContext()).load(imageUrl).into(imageView);
-        Glide.with(imageView.getContext())
-                .load(imageUrl)
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .placeholder(R.color.cardview_dark_background)
-                .into(imageView);
-    }
+
+
 }
 

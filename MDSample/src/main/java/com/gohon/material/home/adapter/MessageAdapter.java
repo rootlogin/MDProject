@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.gohon.material.BR;
 import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterMessageBinding;
+import com.gohon.material.home.events.OnRecyclerItemClickListener;
 import com.gohon.material.home.viewholder.LoadingViewHolder;
 import com.gohon.material.home.viewholder.MessageViewHolder;
 import com.gohon.material.home.viewmodles.MessageModel;
@@ -27,6 +28,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private final int VIEW_TYPE_LOADING = 1;
     private List<MessageModel> messageModelList;
     private Drawable drawable;
+    private OnRecyclerItemClickListener onRecyclerItemClickListener;
+
+
 
     public MessageAdapter(Context context, List<MessageModel> messageModelList) {
 //        this.drawable = new NexusRotationCrossDrawable.Builder(context).colors(context.getResources().getIntArray(R.array.google_colors)).build();
@@ -34,6 +38,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         this.messageModelList = messageModelList;
     }
 
+    public void setOnRecyclerItemClickListener(OnRecyclerItemClickListener onRecyclerItemClickListener) {
+        this.onRecyclerItemClickListener = onRecyclerItemClickListener;
+    }
 
     @Override
     public int getItemViewType(int position) {
@@ -44,7 +51,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_ITEM) {
             AdapterMessageBinding adapterMessageBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.adapter_message, parent, false);
-            MessageViewHolder messageViewHolder = new MessageViewHolder(adapterMessageBinding.getRoot());
+            MessageViewHolder messageViewHolder = new MessageViewHolder(adapterMessageBinding.getRoot(),onRecyclerItemClickListener);
             messageViewHolder.setAdapterMessageBinding(adapterMessageBinding);
             return messageViewHolder;
 
@@ -61,6 +68,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             MessageModel messageModel = messageModelList.get(position);
             ((MessageViewHolder) holder).getAdapterMessageBinding().setVariable(BR.messageData, messageModel);
             ((MessageViewHolder) holder).getAdapterMessageBinding().executePendingBindings();
+//            ((MessageViewHolder) holder);
         } else if (holder instanceof LoadingViewHolder) {
             LoadingViewHolder loadingViewHolder = (LoadingViewHolder) holder;
 //            loadingViewHolder.progressBar.setIndeterminateDrawable(drawable);
