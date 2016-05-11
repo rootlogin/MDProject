@@ -3,7 +3,9 @@ package com.gohon.material.home.viewholder;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterMessageBinding;
 import com.gohon.material.home.events.OnRecyclerItemClickListener;
 
@@ -24,10 +26,11 @@ public class MessageViewHolder extends RecyclerView.ViewHolder {
 
     public MessageViewHolder(View itemView, final OnRecyclerItemClickListener onRecyclerItemClickListener) {
         super(itemView);
+        final ImageView imageView = (ImageView) itemView.findViewById(R.id.adapter_message_image);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onRecyclerItemClickListener.OnItemClickListener(adapterMessageBinding);
+                onRecyclerItemClickListener.OnItemClickListener(adapterMessageBinding,imageView);
             }
         });
     }

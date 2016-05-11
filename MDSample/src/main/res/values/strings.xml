@@ -4,4 +4,7 @@
     <string name="action_seach">Search</string>
     <string name="search_name">searchName</string>
     <string name="search_hint">searchHint</string>
+
+    <string name="message_share_title">shareTitle</string>
+    <string name="message_share_image">shareImage</string>
 </resources>

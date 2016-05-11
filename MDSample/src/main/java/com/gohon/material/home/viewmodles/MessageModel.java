@@ -5,11 +5,13 @@ import android.databinding.Bindable;
 
 import com.gohon.material.BR;
 
+import java.io.Serializable;
+
 /**
  * Message Observable Model
  * Created by liuyonglong on 16/5/9.
  */
-public class MessageModel extends BaseObservable {
+public class MessageModel extends BaseObservable implements Serializable {
 
     private String title;
     private String description;

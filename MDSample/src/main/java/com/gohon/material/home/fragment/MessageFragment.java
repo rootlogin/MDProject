@@ -9,13 +9,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.util.Pair;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
 import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterMessageBinding;
 import com.gohon.material.databinding.FragmentMessageBinding;
@@ -154,8 +158,13 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
 
 
     @Override
-    public void OnItemClickListener(AdapterMessageBinding adapterMessageBinding) {
+    public void OnItemClickListener(AdapterMessageBinding adapterMessageBinding, ImageView imageView) {
         Intent intent = new Intent(getActivity(), MessageDetailActivity.class);
-        startActivity(intent);
+        Pair<View, String> titlePair = new Pair<View, String>(adapterMessageBinding.adapterMessageTitle,getString(R.string.message_share_title));
+        Pair<View, String> imagePair = new Pair<View, String>(adapterMessageBinding.adapterMessageImage,getString(R.string.message_share_image));
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(getActivity(),titlePair,imagePair);
+        intent.putExtra("messageModel",adapterMessageBinding.getMessageData());
+        startActivity(intent,options.toBundle());
     }
 }
