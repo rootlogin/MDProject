@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:googleAttr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
 
-    <ProgressBar
+    <!--<ProgressBar-->
+    <!--android:id="@+id/recyclerview_loading_progressBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <com.gohon.material.home.weight.progressBar.GoogleProgressBar
         android:id="@+id/recyclerview_loading_progressBar"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        googleAttr:type="folding_circles" />
 </LinearLayout>

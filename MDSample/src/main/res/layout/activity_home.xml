@@ -23,7 +23,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/home_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             app:tabGravity="fill"
             app:tabMode="fixed" />
     </android.support.design.widget.AppBarLayout>
@@ -40,5 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_behavior="com.gohon.material.home.weight.ScrollAwareFABBehavior"
+        />
 </android.support.design.widget.CoordinatorLayout>
