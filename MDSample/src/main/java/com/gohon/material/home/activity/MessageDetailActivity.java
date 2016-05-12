@@ -1,18 +1,15 @@
 package com.gohon.material.home.activity;
 
-import android.annotation.TargetApi;
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.Toolbar;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.gohon.material.R;
 import com.gohon.material.databinding.ActivityMessageDetailBinding;
+import com.gohon.material.home.events.DetailPaletteEvents;
 import com.gohon.material.home.viewmodles.MessageModel;
 
 /**
@@ -23,21 +20,24 @@ public class MessageDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_message_detail);
-       MessageModel messageModel = (MessageModel) getIntent().getExtras().getSerializable("messageModel");
-       ActivityMessageDetailBinding activityMessageDetailBinding = DataBindingUtil.setContentView(this,R.layout.activity_message_detail);
+        MessageModel messageModel = (MessageModel) getIntent().getExtras().getSerializable("messageModel");
+        int colors = getIntent().getExtras().getInt("messageColors");
+        DetailPaletteEvents detailPaletteEvents = new DetailPaletteEvents(colors);
+        ActivityMessageDetailBinding activityMessageDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_message_detail);
         activityMessageDetailBinding.setMessageData(messageModel);
+        activityMessageDetailBinding.setPaleteeEvents(detailPaletteEvents);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+//        setTheme();
     }
 
-    private void test(){
-        AppCompatImageView imageView = (AppCompatImageView) findViewById(R.id.image);
-        String url = getIntent().getStringExtra("url");
-        Glide.with(imageView.getContext())
-                .load(url)
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .placeholder(R.color.cardview_dark_background)
-                .into(imageView);
-
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP)
-            imageView.setTransitionName(getString(R.string.message_share_image));}
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }

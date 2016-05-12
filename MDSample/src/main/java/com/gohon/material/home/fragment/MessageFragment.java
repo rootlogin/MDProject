@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -158,13 +160,22 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
 
 
     @Override
-    public void OnItemClickListener(AdapterMessageBinding adapterMessageBinding, ImageView imageView) {
+    public void OnItemClickListener(AdapterMessageBinding adapterMessageBinding) {
+
+//        MessageModel messageModel = adapterMessageBinding.getMessageData();
+////        messageModel.
+//
+//
+//        Bitmap bitmap = ((BitmapDrawable)adapterMessageBinding.adapterMessageImage.getDrawable()).getBitmap();
+//        messageModel.setBitmap(bitmap);
+
         Intent intent = new Intent(getActivity(), MessageDetailActivity.class);
         Pair<View, String> titlePair = new Pair<View, String>(adapterMessageBinding.adapterMessageTitle,getString(R.string.message_share_title));
         Pair<View, String> imagePair = new Pair<View, String>(adapterMessageBinding.adapterMessageImage,getString(R.string.message_share_image));
         ActivityOptionsCompat options = ActivityOptionsCompat.
                 makeSceneTransitionAnimation(getActivity(),titlePair,imagePair);
         intent.putExtra("messageModel",adapterMessageBinding.getMessageData());
+        intent.putExtra("messageColors",(int)adapterMessageBinding.adapterMessageImage.getTag());
         startActivity(intent,options.toBundle());
     }
 }

@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.gohon.material.BR;
 import com.gohon.material.R;
 import com.gohon.material.databinding.AdapterMessageBinding;
@@ -16,8 +15,6 @@ import com.gohon.material.home.viewholder.LoadingViewHolder;
 import com.gohon.material.home.viewholder.MessageViewHolder;
 import com.gohon.material.home.viewmodles.MessageModel;
 import com.gohon.material.home.weight.progressBar.GoogleMusicDicesDrawable;
-import com.gohon.material.home.weight.progressBar.NexusRotationCrossDrawable;
-
 import java.util.List;
 
 /**

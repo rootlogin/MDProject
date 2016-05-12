@@ -8,5 +8,5 @@ import android.widget.ImageView;
  */
 public interface OnRecyclerItemClickListener<T extends ViewDataBinding> {
 
-    void OnItemClickListener(T t,ImageView imageView);
+    void OnItemClickListener(T t);
 }

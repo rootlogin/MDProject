@@ -2,6 +2,7 @@ package com.gohon.material.home.viewmodles;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.graphics.Bitmap;
 
 import com.gohon.material.BR;
 
@@ -16,6 +17,9 @@ public class MessageModel extends BaseObservable implements Serializable {
     private String title;
     private String description;
     private String image;
+    private Bitmap bitmap;
+
+
 
     @Bindable
     public String getTitle() {
@@ -47,8 +51,15 @@ public class MessageModel extends BaseObservable implements Serializable {
         notifyPropertyChanged(BR.image);
     }
 
+    @Bindable
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
 
-
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
+        notifyPropertyChanged(BR.bitmap);
+    }
 
 }
 

@@ -26,11 +26,10 @@ public class MessageViewHolder extends RecyclerView.ViewHolder {
 
     public MessageViewHolder(View itemView, final OnRecyclerItemClickListener onRecyclerItemClickListener) {
         super(itemView);
-        final ImageView imageView = (ImageView) itemView.findViewById(R.id.adapter_message_image);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onRecyclerItemClickListener.OnItemClickListener(adapterMessageBinding,imageView);
+                onRecyclerItemClickListener.OnItemClickListener(adapterMessageBinding);
             }
         });
     }

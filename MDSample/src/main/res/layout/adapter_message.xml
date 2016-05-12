@@ -54,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:maxLength="16"
                     android:singleLine="true"
+                    style="@style/ToolbarTheme.title"
                     android:transitionName="@string/message_share_title"
                     android:text="@{messageData.title}"/>
 
