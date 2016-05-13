@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:googleAttr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        googleAttr:uisdk_type="folding_circles" />
+
+    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        googleAttr:uisdk_type="google_music_dices" />
+
+    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        googleAttr:uisdk_type="nexus_rotation_cross" />
+
+    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        googleAttr:uisdk_type="chrome_floating_circles" />
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="40"
+        android:layout_height="40" />
+</android.support.v7.widget.LinearLayoutCompat>

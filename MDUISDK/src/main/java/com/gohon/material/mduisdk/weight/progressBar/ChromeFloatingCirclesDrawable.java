@@ -1,4 +1,4 @@
-package com.gohon.material.home.weight.progressBar;
+package com.gohon.material.mduisdk.weight.progressBar;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,7 +9,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-import com.gohon.material.R;
+import com.gohon.material.mduisdk.R;
 
 /**
  * Created by liuyonglong on 16/5/10.

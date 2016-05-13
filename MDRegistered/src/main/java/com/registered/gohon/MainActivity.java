@@ -6,11 +6,14 @@ package com.registered.gohon;
 
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.IntentCompat;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -43,16 +46,7 @@ public class MainActivity extends AppCompatActivity
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
 
-                Intent i = new Intent(MainActivity.this, TestView.class);
-
-                View sharedView = findViewById(R.id.image);
-//                String transitionName = getString(R.string.blue_name);
-
-                ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, sharedView, "hero");
-                startActivity(i, transitionActivityOptions.toBundle());
 
             }
         });

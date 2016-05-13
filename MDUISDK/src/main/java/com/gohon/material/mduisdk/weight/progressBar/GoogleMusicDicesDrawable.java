@@ -1,4 +1,4 @@
-package com.gohon.material.home.weight.progressBar;
+package com.gohon.material.mduisdk.weight.progressBar;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

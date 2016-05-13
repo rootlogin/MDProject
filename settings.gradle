@@ -1,1 +1,1 @@
-include ':MDSample', ':MDRegistered', ':MDSDK', ':app', ':jnisample'
+include ':MDSample', ':MDRegistered', ':MDSDK', ':app', ':jnisample', ':MDUISDK'

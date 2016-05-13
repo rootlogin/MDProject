@@ -14,7 +14,8 @@ import com.gohon.material.home.events.OnRecyclerItemClickListener;
 import com.gohon.material.home.viewholder.LoadingViewHolder;
 import com.gohon.material.home.viewholder.MessageViewHolder;
 import com.gohon.material.home.viewmodles.MessageModel;
-import com.gohon.material.home.weight.progressBar.GoogleMusicDicesDrawable;
+import com.gohon.material.mduisdk.weight.progressBar.GoogleMusicDicesDrawable;
+
 import java.util.List;
 
 /**

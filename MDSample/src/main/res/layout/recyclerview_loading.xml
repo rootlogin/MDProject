@@ -12,9 +12,9 @@
     <!--android:layout_gravity="center"-->
     <!--android:layout_height="wrap_content" />-->
 
-    <com.gohon.material.home.weight.progressBar.GoogleProgressBar
+    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
         android:id="@+id/recyclerview_loading_progressBar"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        googleAttr:type="folding_circles" />
+        googleAttr:uisdk_type="folding_circles" />
 </LinearLayout>

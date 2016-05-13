@@ -1,4 +1,4 @@
-package com.gohon.material.home.weight.progressBar;
+package com.gohon.material.mduisdk.weight.progressBar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-import com.gohon.material.R;
+import com.gohon.material.mduisdk.R;
+
 
 /**
  * Created by liuyonglong on 16/5/10.
@@ -36,9 +37,9 @@ public class GoogleProgressBar extends ProgressBar {
         if (isInEditMode())
             return;
 
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.GoogleProgressBar, defStyle, 0);
-        final int typeIndex = a.getInteger(R.styleable.GoogleProgressBar_type, context.getResources().getInteger(R.integer.default_type));
-        final int colorsId = a.getResourceId(R.styleable.GoogleProgressBar_colors, R.array.google_colors);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.UISDK_GoogleProgressBar, defStyle, 0);
+        final int typeIndex = a.getInteger(R.styleable.UISDK_GoogleProgressBar_uisdk_type, context.getResources().getInteger(R.integer.default_type));
+        final int colorsId = a.getResourceId(R.styleable.UISDK_GoogleProgressBar_colors, R.array.google_colors);
         a.recycle();
 
         Drawable drawable = buildDrawable(context,typeIndex,colorsId);

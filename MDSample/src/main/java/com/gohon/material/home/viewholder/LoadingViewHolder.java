@@ -2,10 +2,8 @@ package com.gohon.material.home.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ProgressBar;
-
 import com.gohon.material.R;
-import com.gohon.material.home.weight.progressBar.GoogleProgressBar;
+import com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar;
 
 /**
  * Created by liuyonglong on 16/5/9.

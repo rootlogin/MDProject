@@ -1,4 +1,4 @@
-package com.gohon.material.home.weight.progressBar;
+package com.gohon.material.mduisdk.weight.progressBar;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -15,7 +15,8 @@ import android.graphics.drawable.Drawable;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
-import com.gohon.material.R;
+import com.gohon.material.mduisdk.R;
+
 
 /**
  * Created by liuyonglong on 16/5/10.
