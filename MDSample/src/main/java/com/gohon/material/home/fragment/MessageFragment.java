@@ -41,7 +41,7 @@ import java.util.Random;
  */
 public class MessageFragment extends Fragment implements RecyclerLoadMoreListener, OnRecyclerItemClickListener<AdapterMessageBinding> {
     private static List<MessageModel> messageModels = new ArrayList<>();
-    private static String[] images={
+    private static String[] images = {
             "http://img3.imgtn.bdimg.com/it/u=3341132500,2418063783&fm=21&gp=0.jpg",
             "http://img1.imgtn.bdimg.com/it/u=4109452979,1965980364&fm=21&gp=0.jpg",
             "http://img2.imgtn.bdimg.com/it/u=601112546,3540523200&fm=21&gp=0.jpg",
@@ -55,7 +55,6 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
             "http://img5.imgtn.bdimg.com/it/u=3606033953,4244886874&fm=21&gp=0.jpg",
             "http://img5.imgtn.bdimg.com/it/u=2525072264,1004952987&fm=21&gp=0.jpg"
     };
-
 
 
     static {
@@ -93,7 +92,7 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
 //        recyclerView.addItemDecoration(new RecyclerItemDecoration(16));
-        adapter = new MessageAdapter(getContext(),messageModels);
+        adapter = new MessageAdapter(getContext(), messageModels);
         adapter.setOnRecyclerItemClickListener(this);
         recyclerView.setAdapter(adapter);
         recyclerScrollListener = new RecyclerScrollListener(linearLayoutManager, this);
@@ -128,26 +127,27 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
             MessageModel messageModel = new MessageModel();
             messageModel.setDescription("测试描述" + i);
             messageModel.setTitle("测试标题" + i);
-            messageModel.setImage(images[new Random().nextInt(images.length-1)]);
+            messageModel.setImage(images[new Random().nextInt(images.length - 1)]);
             messageModels.add(messageModel);
         }
     }
 
     /**
      * 设置swipeRefreshLayout样式
+     *
      * @param swipeRefreshLayout
      */
-    private void setSwipeSchemeColors(SwipeRefreshLayout swipeRefreshLayout){
+    private void setSwipeSchemeColors(SwipeRefreshLayout swipeRefreshLayout) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-           Resources.Theme theme = getActivity().getTheme();
+            Resources.Theme theme = getActivity().getTheme();
             int[] colors = {
-                    getResources().getColor(R.color.red,theme),
-                    getResources().getColor(R.color.green,theme),
-                    getResources().getColor(R.color.blue,theme),
-                    getResources().getColor(R.color.yellow,theme)
+                    getResources().getColor(R.color.red, theme),
+                    getResources().getColor(R.color.green, theme),
+                    getResources().getColor(R.color.blue, theme),
+                    getResources().getColor(R.color.yellow, theme)
             };
             swipeRefreshLayout.setColorSchemeColors(colors);
-        }else{
+        } else {
             int[] colors = {
                     getResources().getColor(R.color.red),
                     getResources().getColor(R.color.green),
@@ -170,12 +170,16 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
 //        messageModel.setBitmap(bitmap);
 
         Intent intent = new Intent(getActivity(), MessageDetailActivity.class);
-        Pair<View, String> titlePair = new Pair<View, String>(adapterMessageBinding.adapterMessageTitle,getString(R.string.message_share_title));
-        Pair<View, String> imagePair = new Pair<View, String>(adapterMessageBinding.adapterMessageImage,getString(R.string.message_share_image));
-        ActivityOptionsCompat options = ActivityOptionsCompat.
-                makeSceneTransitionAnimation(getActivity(),titlePair,imagePair);
-        intent.putExtra("messageModel",adapterMessageBinding.getMessageData());
-        intent.putExtra("messageColors",(int)adapterMessageBinding.adapterMessageImage.getTag());
-        startActivity(intent,options.toBundle());
+        intent.putExtra("messageModel", adapterMessageBinding.getMessageData());
+        intent.putExtra("messageColors", (int) adapterMessageBinding.adapterMessageImage.getTag());
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+            startActivity(intent);
+        } else {
+            Pair<View, String> titlePair = new Pair<View, String>(adapterMessageBinding.adapterMessageTitle, getString(R.string.message_share_title));
+            Pair<View, String> imagePair = new Pair<View, String>(adapterMessageBinding.adapterMessageImage, getString(R.string.message_share_image));
+            ActivityOptionsCompat options = ActivityOptionsCompat.
+                    makeSceneTransitionAnimation(getActivity(), titlePair, imagePair);
+            startActivity(intent, options.toBundle());
+        }
     }
 }

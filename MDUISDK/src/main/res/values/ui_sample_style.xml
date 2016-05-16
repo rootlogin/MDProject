@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UI_Sample_Progress" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">@dimen/ui_40dp</item>
+        <item name="android:layout_height">@dimen/ui_40dp</item>
+    </style>
+</resources>

@@ -1,34 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:googleAttr="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:googleAttr="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        googleAttr:uisdk_type="folding_circles" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        googleAttr:uisdk_type="google_music_dices" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        googleAttr:uisdk_type="nexus_rotation_cross" />
+            <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+                style="@style/UI_Sample_Progress"
+                googleAttr:uisdk_type="folding_circles" />
+        </LinearLayout>
 
-    <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        googleAttr:uisdk_type="chrome_floating_circles" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+                style="@style/UI_Sample_Progress"
+                googleAttr:uisdk_type="google_music_dices" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+                style="@style/UI_Sample_Progress"
+                googleAttr:uisdk_type="nexus_rotation_cross" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.gohon.material.mduisdk.weight.progressBar.GoogleProgressBar
+                style="@style/UI_Sample_Progress"
+                googleAttr:uisdk_type="chrome_floating_circles" />
+        </LinearLayout>
+    </LinearLayout>
 
 
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="40"
-        android:layout_height="40" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/UI_Sample_Progress" />
+    </LinearLayout>
+
 </android.support.v7.widget.LinearLayoutCompat>

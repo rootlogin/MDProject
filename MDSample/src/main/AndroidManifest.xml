@@ -36,7 +36,7 @@
 
         <activity
             android:name=".home.activity.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppThemeCustom">
             <intent-filter>
                 <action android:name="android.intent.action.TAB" />
                 <category android:name="android.intent.category.DEFAULT" />
