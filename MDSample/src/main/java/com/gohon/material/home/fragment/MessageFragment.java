@@ -15,6 +15,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.Pair;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -88,6 +89,10 @@ public class MessageFragment extends Fragment implements RecyclerLoadMoreListene
         });
 
         RecyclerView recyclerView = (RecyclerView) rooView.findViewById(R.id.framgent_message_recycler);
+        DefaultItemAnimator defaultItemAnimator = new DefaultItemAnimator();
+        defaultItemAnimator.setMoveDuration(1000);
+        defaultItemAnimator.setSupportsChangeAnimations(true);
+        recyclerView.setItemAnimator(defaultItemAnimator);
 //        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();

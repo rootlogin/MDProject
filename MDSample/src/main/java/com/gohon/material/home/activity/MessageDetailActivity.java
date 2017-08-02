@@ -50,8 +50,8 @@ public class MessageDetailActivity extends AppCompatActivity {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
                 switch (menuItemId){
-//                    case R.id.bottomBarRecents:
-//                        break;
+                    case R.id.bb_menu_recents:
+                        break;
                 }
 
             }

@@ -39,7 +39,7 @@ public class GoogleProgressBar extends ProgressBar {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.UISDK_GoogleProgressBar, defStyle, 0);
         final int typeIndex = a.getInteger(R.styleable.UISDK_GoogleProgressBar_uisdk_type, context.getResources().getInteger(R.integer.default_type));
-        final int colorsId = a.getResourceId(R.styleable.UISDK_GoogleProgressBar_colors, R.array.google_colors);
+        final int colorsId = a.getResourceId(R.styleable.UISDK_GoogleProgressBar_google_progress_colors, R.array.google_colors);
         a.recycle();
 
         Drawable drawable = buildDrawable(context,typeIndex,colorsId);

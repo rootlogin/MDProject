@@ -7,6 +7,6 @@
             <enum name="nexus_rotation_cross" value="2" />
             <enum name="chrome_floating_circles" value="3" />
         </attr>
-        <attr name="colors" format="reference"/>
+        <attr name="google_progress_colors" format="reference"/>
     </declare-styleable>
 </resources>

@@ -12,19 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.mvp.CustomActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.longfor.property.plugin.action_creatreport" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestView"/>
 
+        <!--<action android:name="com.longfor.property.plugin.action_creatreport" />-->
+
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+
+        <activity android:name=".TestView" />
+
+        <service android:name="com.longfor.property.PluginServices">
+            <intent-filter>
+                <action android:name="com.longfor.property.plugin.action_creatreport" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

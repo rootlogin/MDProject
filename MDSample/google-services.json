@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "688941392124",
+    "firebase_url": "https://project-3302470122333078857.firebaseio.com",
+    "project_id": "project-3302470122333078857",
+    "storage_bucket": "project-3302470122333078857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688941392124:android:ed4539573d4f7cec",
+        "android_client_info": {
+          "package_name": "com.gohon.material"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688941392124-0k2kgsu2m4bpfb22iv4dgeefepdggka0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gohon.material",
+            "certificate_hash": "CFA59C2B13284D80BC377188AEF0D17964EF7B7F"
+          }
+        },
+        {
+          "client_id": "688941392124-ooscv1b5ekd89qfos0mlf2b17v82jjkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5CNGIbcIIXqqk9zijbFi59Y6F3UvuQVo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688941392124-ooscv1b5ekd89qfos0mlf2b17v82jjkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

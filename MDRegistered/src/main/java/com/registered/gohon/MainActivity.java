@@ -46,7 +46,11 @@ public class MainActivity extends AppCompatActivity
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent("com.longfor.property.plugin.action_creatreport");
+                intent.setPackage("com.registered.gohon");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.putExtra("bundle", bundle);
+                MainActivity.this.startService(intent);
 
             }
         });

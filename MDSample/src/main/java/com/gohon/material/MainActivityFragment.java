@@ -11,14 +11,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.gohon.material.adapter.UserAdapter;
 import com.gohon.material.events.UserEvents;
 import com.gohon.material.handlers.UserHandlers;
 import com.gohon.material.pojo.User;
 import com.gohon.material.databinding.FragmentMainBinding;
 import com.gohon.material.http.UserApi;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -66,13 +69,13 @@ public class MainActivityFragment extends Fragment {
 
     public void onCreateListData() {
         for (int i = 0; i < 10; i++) {
-            User user = new User("name"+i,i);
+            User user = new User("name" + i, i);
             userList.add(user);
         }
         adapter.notifyDataSetChanged();
     }
 
-    private void retrofit2Request(){
+    private void retrofit2Request() {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.37.63.86:8080/MDProjectServer/")
@@ -92,7 +95,6 @@ public class MainActivityFragment extends Fragment {
 //                Log.e("retrofit2",t.toString());
             }
         });
-
 
 
     }

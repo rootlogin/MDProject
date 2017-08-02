@@ -14,6 +14,7 @@ import android.view.View;
 import com.gohon.material.R;
 import com.gohon.material.home.adapter.ViewPagerAdapter;
 import com.gohon.material.home.fragment.AboutFragment;
+import com.gohon.material.home.fragment.ConstraintFragment;
 import com.gohon.material.home.fragment.HomeFragment;
 import com.gohon.material.home.fragment.MessageFragment;
 import com.gohon.material.mduisdk.weight.progressBar.sample.GoogProgressBarSample;
@@ -45,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         viewPagerAdapter.addFragment(new MessageFragment(), "Message");
         viewPagerAdapter.addFragment(new AboutFragment(), "About");
         viewPagerAdapter.addFragment(new GoogProgressBarSample(), "Progress");
+//        viewPagerAdapter.addFragment(new ConstraintFragment(), "Constraint");
         viewPager.setAdapter(viewPagerAdapter);
     }
 
